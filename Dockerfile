@@ -31,7 +31,7 @@ ENV PATH $MAVEN_HOME/bin:$PATH
             
 # clone and compile hive
 ENV HIVE_VERSION 0.13.4-inm-SNAPSHOT
-RUN cd /usr/local && git clone https://github.com/InMobi/hive.git
+RUN cd /usr/local && git clone https://github.com/pandut/docker-hive/hive.git
 RUN cd /usr/local/hive && /usr/local/maven/bin/mvn clean install -DskipTests -Phadoop-2,dist
 RUN mkdir /usr/local/hive-dist && tar -xf /usr/local/hive/packaging/target/apache-hive-${HIVE_VERSION}-bin.tar.gz -C /usr/local/hive-dist
 
