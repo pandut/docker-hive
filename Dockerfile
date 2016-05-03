@@ -22,13 +22,6 @@ USER root
 RUN yum update
 RUN yum install -y git libprotobuf-dev protobuf-compiler
 
-# install maven
-RUN curl -s http://mirror.olnevhost.net/pub/apache/maven/binaries/apache-maven-3.2.1-bin.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s apache-maven-3.2.1 maven
-ENV MAVEN_HOME /usr/local/maven
-ENV PATH $MAVEN_HOME/bin:$PATH
-
-            
 # clone and compile hive
 ENV HIVE_VERSION 0.13.4-inm-SNAPSHOT
 RUN cd /usr/local && git clone https://github.com/pandut/docker-hive/hive.git
