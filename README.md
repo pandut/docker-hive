@@ -8,8 +8,8 @@ Docker image to run Hive
 
 ## Pull the image
 
-docker pull inmobi/docker-hive
+docker pull pandut/docker-hive
 
 ## Run the image
 
-docker run -itP inmobi/docker-hive /etc/hive-bootstrap.sh -bash
+docker run -itP pandut/docker-hive /etc/hive-bootstrap.sh -bash
