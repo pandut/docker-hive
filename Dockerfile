@@ -5,7 +5,7 @@ MAINTAINER "pandu t"<pandu.t@qubida.com>
 
 # to configure postgres as hive metastore backend
 RUN yum update
-RUN yum -yq install vim postgresql-9.3 libpostgresql-jdbc-java
+RUN yum  install vim postgresql-9.3 libpostgresql-jdbc-java
 
 # create metastore db, hive user and assign privileges
 USER postgres
